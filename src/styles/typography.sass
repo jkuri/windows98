@@ -1,1 +1,10 @@
-$font-family: Tahoma, Verdana
+=font-face($family, $path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url('#{$path}.ttf') format('truetype')
+    font-weight: $weight
+    font-style: $style
+
++font-face('ms', '/assets/fonts/ms')
+
+$font-family: 'ms', sans-serif
