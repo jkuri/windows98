@@ -45,10 +45,10 @@
 
   .shortcuts-container
     display: inline-flex
-    margin: 2px
+    margin: 2px 5px
     border-left: 1px solid #8a8a8a
     border-right: 1px solid #8a8a8a
-    padding: 3px
+    padding: 3px 12px 3px 3px
     align-items: center
 
   .taskbar-main-container
@@ -85,3 +85,89 @@
         .clock
           color: $black
           font-size: 14px
+
+  .start-menu
+    +backdrop
+    position: absolute
+    left: 0
+    bottom: 44px
+    width: 195px
+    font-size: 13px
+    cursor: default
+    display: none
+
+    &.is-active
+      display: block
+
+    .menu-sidebar
+      background: linear-gradient(to bottom, $blue-dark, $blue-light)
+      position: absolute
+      width: 25px
+      height: 100%
+      left: 0
+      top: 0
+
+      .headline
+        transform: rotate(270deg)
+        position: absolute
+        bottom: 40px
+        left: -32px
+        width: 100px
+        height: 30px
+        font-size: 16px
+        color: $white
+        letter-spacing: 0.5px
+
+    .menu-content
+      float: right
+      color: $black
+      width: 170px
+      list-style: none
+
+      .divider
+        margin: 7px 6px
+        border-top: 1px solid $grey-dark
+        border-bottom: 1px solid $grey-lighter
+
+      .item
+        display: flex
+        align-items: center
+
+        &.folder
+          position: relative
+
+          .icon
+            width: 26px
+            height: 26px
+            margin: 6px 10px
+
+          &.arrow-right
+
+            &::after
+              content: '\25B6'
+              position: absolute
+              font-size: 10px
+              right: 10px
+
+        &:hover, &:focus
+          color: $white
+          background: $blue-dark
+
+          .menu-content
+            display: block
+
+        .menu-content
+          +backdrop
+          display: none
+          position: absolute
+          left: 167px
+          top: 0
+          width: 200px
+
+          .item
+            padding: 3px 10px
+
+          .icon
+            width: 18px
+            height: 18px
+            margin: 5px

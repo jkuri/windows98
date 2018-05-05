@@ -1,5 +1,5 @@
 <div class="start-bar">
-  <button class="start-button" type="button">
+  <button class="start-button" type="button" (click)="startBarOpened = !startBarOpened" [class.is-active]="startBarOpened">
     <img src="/assets/icons/windows-0.png" class="icon icon-small">
     <span>Start</span>
   </button>
@@ -27,4 +27,105 @@
       </div>
     </div>
   </section>
+
+  <div class="start-menu" [class.is-active]="startBarOpened">
+    <div class="menu-sidebar">
+      <div class="headline">
+        <strong>Windows</strong> 98
+      </div>
+    </div>
+    <ul class="menu-content">
+      <li class="item folder arrow-right">
+        <img class="icon" src="/assets/icons/directory_program_group-5.png">
+        <span>Programs</span>
+        <ul class="menu-content">
+          <li class="item">
+            <img class="icon" src="/assets/icons/msie2-2.png">
+            <span>Internet Explorer</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/outlook_express-5.png">
+            <span>Outlook Express</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/notepad-5.png">
+            <span>Notepad</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/write_wordpad-1.png">
+            <span>Wordpad</span>
+          </li>
+        </ul>
+      </li>
+      <li class="item folder arrow-right">
+        <img class="icon" src="/assets/icons/directory_favorites-2.png">
+        <span>Favorites</span>
+        <ul class="menu-content">
+          <li class="item">
+            <img class="icon" src="/assets/icons/directory_open_file_mydocs_2k-4.png">
+            <span>Channels</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/directory_e-5.png">
+            <span>Links</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/directory_open_file_mydocs_2k-4.png">
+            <span>Software Updates</span>
+          </li>
+        </ul>
+      </li>
+      <li class="item folder arrow-right">
+        <img class="icon" src="/assets/icons/directory_open_file_mydocs-1.png">
+        <span>Documents</span>
+        <ul class="menu-content">
+          <li class="item">
+            <img class="icon" src="/assets/icons/midi_gr-2.png">
+            <span>Wu-Tang - Triumph.mp3</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/media_player_file-2.png">
+            <span>free_porn.avi</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/write_file-1.png">
+            <span>My Passwords.doc</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/notepad-5.png">
+            <span>net_notes.txt</span>
+          </li>
+          <li class="item">
+            <img class="icon" src="/assets/icons/paint-5.png">
+            <span>wallpaper_bg.bmp</span>
+          </li>
+        </ul>
+      </li>
+      <li class="item folder arrow-right">
+        <img class="icon" src="/assets/icons/settings_gear-0.png">
+        <span>Settings</span>
+      </li>
+      <li class="item folder arrow-right">
+        <img class="icon" src="/assets/icons/search_file_2-4.png">
+        <span>Find</span>
+      </li>
+      <li class="item folder">
+        <img class="icon" src="/assets/icons/help_book_cool-4.png">
+        <span>Help</span>
+      </li>
+      <li class="item folder">
+        <img class="icon" src="/assets/icons/application_hourglass-0.png">
+        <span>Run...</span>
+      </li>
+      <li class="divider"></li>
+      <li class="item folder">
+        <img class="icon" src="/assets/icons/key_win-4.png">
+        <span>Log Off Win98...</span>
+      </li>
+      <li class="item folder">
+        <img class="icon" src="/assets/icons/standby_monitor_moon-4.png">
+        <span>Shut Down...</span>
+      </li>
+    </ul>
+  </div>
 </div>

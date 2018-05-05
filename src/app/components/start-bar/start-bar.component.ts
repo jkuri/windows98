@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start-bar.component.css']
 })
 export class StartBarComponent implements OnInit {
+  startBarOpened: boolean;
 
   constructor() { }
 
